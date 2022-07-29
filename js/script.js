@@ -70,7 +70,7 @@ while (true) {
             getNum + "/" + getNum;
         for (var i = 0; i < getNum; i++) {
             var img = document.createElement("img");
-            img.src = "../images/star.png";
+            img.src = 'images/star.png';
             var src = document.getElementById("starBox");
             src.appendChild(img);
         }
