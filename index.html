@@ -8,16 +8,19 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 </head>
-<body>
-    <nav id="header">
+<body class="colorchange">
+    <nav id="nav" class="colorchange">
         <h1>How I Design Board Game Playmats</h1>
         <h2>Matthew Sklepowich</h2>
     </nav>
+    <nav class="proxy"></nav>
 
     <!-- Intro section, describe why I make these-->
-    <nav id="intro">
+    <div id="intro">
+        <button class="colorchange" onclick="colorChange()">Click this button to change the color of this website!</button>
         <p>When I was a teenager, I started learning PhotoShop. Never was good at drawing, but have been able to use technical skills to express art. Make designs that are printed onto cloth mats, which people play board games and card games on. It is fun to make these and a great way for people to express their interests while playing games with friends!</p>
-    </nav>
+
+    </div>
     
     <!-- Card Zone Section, the process of making 1 specific zone-->
     <div class="row">
@@ -45,11 +48,11 @@
             <p>Half of a playmat done. Once the first half is built, it is rotated 180 degrees to create the top half.</p>
         </div>
         <div class="middle">
-            <img src="images/horizontalplaymatpreview.png" alt="A frame with a more 'vertical' card zone placement. Things are pushed to the edges.">
+            <img src="images/verticalplaymatpreview.png" alt="A frame with a more 'vertical' card zone placement. Things are pushed to the edges.">
             <p>A design where card zones are pushed further to edges, user has to reach further across the table, but they have more room in the center.</p>
         </div>
         <div class="right">
-            <img src="images/verticalplaymatpreview.png" alt="A frame with a more 'horizontal' card zone placement.">
+            <img src="images/horizontalplaymatpreview.png" alt="A frame with a more 'horizontal' card zone placement.">
             <p>A design that has card zones pulled closer to their user on each respective end. No longer have to reach as far across, but they lose space down the middle column of the mat.</p>
         </div>
     </div>
@@ -66,13 +69,18 @@
             <p>Images and gradients are added on top of one another until the results are what is being looked for.</p>
         </div>
         <div class="right">
-            <img src="images/playmat3preview.png" alt="A moon and cityscapes on opposing sides are added.">
+            <div id="slides" class="slideshow">
+                <div>
+                    <img name="slide">
+                </div>
+            </div>
             <p>Further VFX are added until it's deemed finished. These files can reach as large as 1.5GB, as theyre 24" x 28" at 300 pixels per inch.</p>
         </div>
     </div>
     <p class="misc">Once final touches are completed, the entire design is compiled as a PNG and given to whomever it is for.</p>
-    <nav id="footer">
+    <div id="footer" class="colorchange">
         <p>&copy; Copyright Matthew Sklepowich 2022</p>
-    </nav>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -6,41 +6,105 @@
 }
 
 body {
-    background-color: #141a39;;
+    background-color: #141a39;
+    transition: all 0.5s ease-in-out;
 }
 
-#header{
-    background: url('../images/header_banner.png') no-repeat;
+body.green {
+    background-color: #0d341f;
+    transition: all 0.5s ease-in-out;
+}
+
+#nav{
+    background: url('../images/hbb.png') no-repeat;
     background-size: auto;
     background-position: center;
+    width: 100%;
     border-bottom: 2px solid #bfbfbf;
-    margin-bottom: 25px;
+    position: fixed;
+    transition: all 0.5s ease-in-out;
+    padding: 25px;
+    max-height: 200px;
 }
+
+#nav.green{
+    background: url('../images/hbg.png') no-repeat;
+    background-size: auto;
+    background-position: center;
+    width: 100%;
+    border-bottom: 2px solid #bfbfbf;
+    position: fixed;
+    transition: all 0.5s ease-in-out;
+    padding: 25px;
+    max-height: 200px;
+}
+
+#nav.active{
+    padding: 5px;
+}
+
+#nav.active h1, #nav.active h2{
+    margin-bottom: 5px;
+}
+
 
 /** HEADER **/
 h1, h2{
     font-size:2.5em;
     text-transform: uppercase;
     text-align: center;
-    margin: 25px, 0, 25px, 0;
+    margin-bottom: 15px;
     color: #bfbfbf;
     text-shadow: 4px 4px 4px #000;
+    top: 0;
+    left: 0;
 }
 
 h2{
     font-size: 1em;
     font-style: italic;
-    margin-bottom: 25px;
 }
 
 #intro p{
     width: 60%;
+
     text-align: center;
     margin-left: 20%;
     margin-bottom: 25px;
     color: #bfbfbf;
     text-shadow: 3px 3px 3px #222;
 }
+
+#intro button{
+    width: 30%;
+    text-align: center;
+    margin-left: 35%;
+    margin-bottom: 25px;
+    color: #000;
+    background-image: linear-gradient(#38cf7c, #189852);
+    margin-top: calc(30vh);
+    font-size: 1em;
+    text-align: center;
+    font-style: italic;
+    border: 3px solid #0d341f;
+    transition: all 0.5s ease-in-out;
+}
+
+#intro button.green{
+    width: 30%;
+    text-align: center;
+    margin-left: 35%;
+    margin-bottom: 25px;
+    color: #000;
+    background-image: linear-gradient(#52b7f8, #3970ee);
+    margin-top: calc(30vh);
+    font-size: 1em;
+    text-align: center;
+    font-style: italic;
+    border: 3px solid #141a39;
+    transition: all 0.5s ease-in-out;
+}
+
 /** BODY **/
 h3{
     font-size: 1.5em;
@@ -84,7 +148,6 @@ h3{
     text-align: center;
     color: #222;
     text-shadow: 3px 3px 3px #bfbfbf;
-
 }
 
 .misc{
@@ -99,6 +162,16 @@ h3{
 /** FOOTER **/
 #footer{
     background: url('../images/header_banner.png') no-repeat;
+    background-size: auto;
+    background-position: center;
+    border-top: 2px solid #bfbfbf;
+    padding: 15px, 0, 15px, 0;
+    margin-top: 25px;
+    height: 150px;
+}
+
+#footer.green{
+    background: url('../images/hbg.png') no-repeat;
     background-size: auto;
     background-position: center;
     border-top: 2px solid #bfbfbf;
