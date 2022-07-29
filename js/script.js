@@ -1,3 +1,4 @@
+//Auto-sizing Header
 const nav = document.querySelector('#nav')
 window.addEventListener('scroll', fixNav)
 
@@ -8,7 +9,7 @@ function fixNav(){
         nav.classList.remove('active')
     }
 }
-
+//Color-changing Button
 function colorChange(){
     var elements = document.getElementsByClassName('colorchange');
     console.log(elements);
@@ -21,7 +22,7 @@ function colorChange(){
         }
     }
 }
-
+//Slideshow Timer
 var i = 0;
 var images =[];
 var time = 5000;
@@ -43,5 +44,39 @@ function changeImg(){
     setTimeout("changeImg()", time);
 }
 
-window.onload = changeImg;
+window.onload = changeImg();
+//User Prompt Name
+function getName() {
+    let name = prompt("Hi there! Please tell me your name!");
+    if (name != "") {
+      document.getElementById("inputName").innerHTML =
+      "- " + name;
+    } else {
+        document.getElementById("inputName").innerHTML =
+        "- The coolest cat around";
+    }
+  }
 
+  window.onload = getName();
+  //User Prompt Number
+  var getNum = prompt("Hey, no reason, but please let me know your favorite number between 1 and 10.");
+  while (true) {
+      if (isNaN(getNum)) {
+          alert("That's not a number, please retry.");
+      } else if (getNum < 0 || getNum > 10) {
+          alert("I asked between 1 and 10, try again.");
+      } else {
+        document.getElementById("inputNum").innerHTML =
+        getNum + "/" + getNum;
+        for (var i = 0; i < getNum; i++) {
+            var img = document.createElement("img");
+            img.src = "../images/star.png";
+            var src = document.getElementById("starBox");
+            src.appendChild(img);
+        }
+          break;
+      }
+      var getNum = prompt("Please tell me your favorite number between 1 and 10.");
+  }
+
+window.onload = getNum();  

@@ -159,6 +159,21 @@ h3{
     text-shadow: 3px 3px 3px #222;
 }
 
+.review{
+    margin-top: 45px;
+}
+.review p {
+    font-size: 1.5em;
+}
+
+#inputName{
+    font-style: italic;
+}
+
+#starbox{
+    width: 100%;
+}
+
 /** FOOTER **/
 #footer{
     background: url('../images/hbb.png') no-repeat;
